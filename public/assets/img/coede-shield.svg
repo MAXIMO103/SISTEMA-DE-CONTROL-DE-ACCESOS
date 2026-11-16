@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6e27a"/>
+      <stop offset="50%" stop-color="#cb9b51"/>
+      <stop offset="100%" stop-color="#9a7126"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#233827"/>
+      <stop offset="100%" stop-color="#141f17"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c91818"/>
+      <stop offset="100%" stop-color="#900d0d"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Laurel Wreath Background -->
+  <g stroke="#cb9b51" stroke-width="2" fill="none" opacity="0.85">
+    <path d="M 40 180 C 15 130 20 70 55 35"/>
+    <path d="M 160 180 C 185 130 180 70 145 35"/>
+  </g>
+  <g fill="#cb9b51" opacity="0.9">
+    <!-- Leaves left -->
+    <path d="M 45 170 Q 30 160 40 150 Q 50 160 45 170 Z"/>
+    <path d="M 35 145 Q 20 135 30 125 Q 40 135 35 145 Z"/>
+    <path d="M 28 120 Q 15 110 25 100 Q 35 110 28 120 Z"/>
+    <path d="M 26 95 Q 15 85 28 75 Q 38 85 26 95 Z"/>
+    <path d="M 33 70 Q 25 60 40 52 Q 48 62 33 70 Z"/>
+    <path d="M 45 48 Q 40 38 56 32 Q 62 44 45 48 Z"/>
+    <!-- Leaves right -->
+    <path d="M 155 170 Q 170 160 160 150 Q 150 160 155 170 Z"/>
+    <path d="M 165 145 Q 180 135 170 125 Q 160 135 165 145 Z"/>
+    <path d="M 172 120 Q 185 110 175 100 Q 165 110 172 120 Z"/>
+    <path d="M 174 95 Q 185 85 172 75 Q 162 85 174 95 Z"/>
+    <path d="M 167 70 Q 175 60 160 52 Q 152 62 167 70 Z"/>
+    <path d="M 155 48 Q 160 38 144 32 Q 138 44 155 48 Z"/>
+  </g>
+
+  <!-- Golden Sunburst on top -->
+  <g fill="url(#goldGrad)">
+    <polygon points="100,5 103,16 114,14 107,22 115,29 104,31 106,42 98,35 94,42 96,31 85,29 93,22 86,14 97,16"/>
+  </g>
+
+  <!-- Main Military Outer Shield Body -->
+  <path d="M 40 30 L 160 30 C 160 30 165 110 160 145 C 150 185 100 220 100 220 C 100 220 50 185 40 145 C 35 110 40 30 40 30 Z" 
+        fill="url(#shieldGrad)" stroke="url(#goldGrad)" stroke-width="4" filter="url(#shadow)"/>
+
+  <!-- Inner Border Line -->
+  <path d="M 46 36 L 154 36 C 154 36 158 108 154 140 C 145 177 100 210 100 210 C 100 210 55 177 46 140 C 42 108 46 36 46 36 Z" 
+        fill="none" stroke="url(#goldGrad)" stroke-width="1.2" stroke-dasharray="4,2" opacity="0.8"/>
+
+  <!-- Peruvian Colors Accent Ribbon across top of shield -->
+  <path d="M 48 38 L 82 38 L 82 52 L 48 52 Z" fill="url(#redGrad)"/>
+  <path d="M 82 38 L 118 38 L 118 52 L 82 52 Z" fill="#ffffff"/>
+  <path d="M 118 38 L 152 38 L 152 52 L 118 52 Z" fill="url(#redGrad)"/>
+
+  <!-- Crossed Swords (Army Emblem) -->
+  <g stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round">
+    <line x1="60" y1="75" x2="140" y2="155"/>
+    <line x1="140" y1="75" x2="60" y2="155"/>
+    <!-- Hilts -->
+    <line x1="56" y1="79" x2="64" y2="71"/>
+    <line x1="136" y1="71" x2="144" y2="79"/>
+    <!-- Guards -->
+    <circle cx="58" cy="77" r="3" fill="#cb9b51"/>
+    <circle cx="142" cy="77" r="3" fill="#cb9b51"/>
+  </g>
+
+  <!-- Central Crest: Torch of Doctrine & Knowledge (Education/COEDE) -->
+  <g filter="url(#shadow)">
+    <!-- Torch handle -->
+    <path d="M 97 100 L 103 100 L 101 165 L 99 165 Z" fill="url(#goldGrad)"/>
+    <!-- Torch bowl -->
+    <path d="M 92 98 L 108 98 L 104 112 L 96 112 Z" fill="url(#goldGrad)"/>
+    <!-- Flame (Red & Gold) -->
+    <path d="M 100 70 C 112 80 110 92 100 96 C 90 92 88 80 100 70 Z" fill="#c91818"/>
+    <path d="M 100 75 C 107 82 106 90 100 93 C 94 90 93 82 100 75 Z" fill="#f6e27a"/>
+  </g>
+
+  <!-- Banner at Bottom -->
+  <path d="M 30 205 L 50 195 L 150 195 L 170 205 L 155 220 L 45 220 Z" 
+        fill="#141f17" stroke="url(#goldGrad)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="100" y="213" fill="#f6e27a" font-family="'Cinzel', 'Times New Roman', serif" font-weight="bold" font-size="12" text-anchor="middle" letter-spacing="3">COEDE</text>
+
+  <!-- Institutional Subtitle -->
+  <text x="100" y="185" fill="#e2ede3" font-family="'Arial', sans-serif" font-weight="bold" font-size="8" text-anchor="middle" letter-spacing="1">EJÉRCITO DEL PERÚ</text>
+</svg>

@@ -1,0 +1,28 @@
+{
+    "name": "coede/sistema-web",
+    "description": "Sistema Web COEDE - Control de Acceso, SID y Operaciones Beta",
+    "type": "project",
+    "authors": [
+        {
+            "name": "COEDE",
+            "email": "admin@coede.mil.pe"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        },
+        "files": [
+            "src/Core/helpers.php"
+        ]
+    },
+    "require": {
+        "phpoffice/phpspreadsheet": "^5.11",
+        "dompdf/dompdf": "^3.1"
+    },
+    "config": {
+        "platform": {
+            "php": "8.2.12"
+        }
+    }
+}

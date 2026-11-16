@@ -1,0 +1,650 @@
+/**
+ * SISTEMA WEB COEDE - Tema Institucional Militar Premium
+ * Comando de Educación y Doctrina del Ejército
+ * Tema Oscuro Táctico Oficial (Beta 2026)
+ */
+
+/* ============================================================
+   VARIABLES GLOBALES DEL TEMA OSCURO INSTITUCIONAL MILITAR
+   ============================================================ */
+:root {
+  --coede-bg: #0c100d;
+  --coede-darker: #060907;
+  --coede-surface: #141c16;
+  --coede-surface-elevated: #1a251e;
+  --coede-border: rgba(197, 155, 63, 0.25);
+  --coede-border-subtle: rgba(255, 255, 255, 0.08);
+  --coede-gold: #c59b3f;
+  --coede-gold-light: #e6c575;
+  --coede-gold-dark: #987223;
+  --coede-olive: #213c28;
+  --coede-olive-dark: #162018;
+  --coede-olive-light: #2ecc71;
+  --coede-slate: #334155;
+  --coede-slate-light: #475569;
+  --coede-text: #f0f4f1;
+  --coede-text-muted: #8c9e90;
+}
+
+/* ============================================================
+   ESTILOS BASE GLOBALES (FONDO OSCURO TÁCTICO)
+   ============================================================ */
+html, body {
+  min-height: 100vh;
+  background-color: var(--coede-bg) !important;
+  color: var(--coede-text) !important;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enlaces por defecto */
+a {
+  color: var(--coede-gold-light);
+  text-decoration: none;
+}
+a:hover {
+  color: #ffffff;
+}
+
+/* ============================================================
+   BARRA SUPERIOR INSTITUCIONAL (NAVBAR)
+   ============================================================ */
+.coede-navbar {
+  background: linear-gradient(180deg, #162018 0%, #0c100d 100%);
+  border-bottom: 1px solid var(--coede-border);
+  padding: 0.75rem 1.25rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.coede-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+.coede-shield-badge {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(212, 160, 23, 0.45);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  overflow: hidden;
+}
+.coede-shield-badge .coede-shield-img,
+.coede-brand img,
+.coede-shield-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.coede-shield-badge-sm {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(212, 160, 23, 0.45);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  overflow: hidden;
+}
+.coede-shield-badge-sm .coede-shield-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.coede-shield-badge-lg {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 2px solid rgba(212, 160, 23, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.coede-shield-badge-lg .coede-shield-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.coede-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.coede-brand-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--coede-gold-light);
+  letter-spacing: 2px;
+}
+.coede-brand-sub {
+  font-size: 0.7rem;
+  color: var(--coede-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.coede-nav-link {
+  color: #c0ccc2;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.coede-nav-link:hover {
+  color: var(--coede-gold-light);
+  background-color: rgba(197, 155, 63, 0.12);
+}
+.coede-nav-link.active {
+  color: #0c100d !important;
+  background-color: var(--coede-gold) !important;
+  box-shadow: 0 0 10px rgba(197, 155, 63, 0.4);
+}
+
+/* ============================================================
+   TARJETAS Y CONTENEDORES (CARDS)
+   ============================================================ */
+.coede-card {
+  background-color: var(--coede-surface) !important;
+  border: 1px solid var(--coede-border) !important;
+  border-radius: 12px;
+  color: var(--coede-text) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card.coede-card {
+  background-color: var(--coede-surface) !important;
+  border: 1px solid var(--coede-border) !important;
+  color: var(--coede-text) !important;
+}
+
+.coede-card-header {
+  background-color: var(--coede-surface-elevated);
+  border-bottom: 1px solid var(--coede-border);
+  padding: 0.85rem 1.25rem;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.coede-card-title {
+  color: var(--coede-gold-light);
+  font-weight: 700;
+}
+
+/* ============================================================
+   BOTONES INSTITUCIONALES MILITARES
+   ============================================================ */
+.btn-coede-gold {
+  background: linear-gradient(135deg, #c59b3f 0%, #987223 100%);
+  color: #0c100d !important;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(197, 155, 63, 0.3);
+}
+.btn-coede-gold:hover {
+  background: linear-gradient(135deg, #e6c575 0%, #c59b3f 100%);
+  color: #000000 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(197, 155, 63, 0.45);
+}
+
+.btn-coede-olive {
+  background: linear-gradient(135deg, #213c28 0%, #162018 100%);
+  color: #e6c575 !important;
+  font-weight: 700;
+  border: 1px solid var(--coede-border);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.btn-coede-olive:hover {
+  background: linear-gradient(135deg, #2a4c33 0%, #1b261e 100%);
+  color: #ffffff !important;
+  border-color: var(--coede-gold);
+}
+
+/* ============================================================
+   TABLAS INSTITUCIONALES (TABLES)
+   ============================================================ */
+.table.coede-table {
+  color: #e2e8f0;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.table.coede-table thead th {
+  background-color: var(--coede-olive-dark) !important;
+  color: var(--coede-gold-light) !important;
+  border-bottom: 2px solid var(--coede-border);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.table.coede-table tbody tr {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.table.coede-table tbody tr:hover {
+  background-color: rgba(197, 155, 63, 0.06);
+}
+.table.coede-table tbody td {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+/* ============================================================
+   BADGES Y ESTADOS INSTITUCIONALES
+   ============================================================ */
+.badge {
+  font-weight: 600 !important;
+}
+
+.badge-militar {
+  background-color: #213c28;
+  color: #79e392;
+  border: 1px solid rgba(121, 227, 146, 0.3);
+  font-weight: 600;
+}
+.badge-civil {
+  background-color: #213444;
+  color: #76c0f2;
+  border: 1px solid rgba(118, 192, 242, 0.3);
+  font-weight: 600;
+}
+
+.badge-vigente {
+  background-color: rgba(30, 126, 70, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+}
+.badge-por-vencer {
+  background-color: rgba(202, 138, 4, 0.2);
+  color: #facc15;
+  border: 1px solid rgba(250, 204, 21, 0.3);
+}
+.badge-vencido {
+  background-color: rgba(220, 38, 38, 0.2);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.3);
+}
+.badge-foto-pendiente {
+  background-color: rgba(234, 88, 12, 0.2);
+  color: #fb923c;
+  border: 1px solid rgba(251, 146, 60, 0.4);
+}
+
+/* ============================================================
+   MODALES, DROPDOWNS Y FORMULARIOS
+   ============================================================ */
+.modal-content {
+  background-color: var(--coede-surface-elevated) !important;
+  border: 1px solid var(--coede-border) !important;
+  color: var(--coede-text) !important;
+}
+.dropdown-menu {
+  background-color: var(--coede-surface-elevated) !important;
+  border: 1px solid var(--coede-border) !important;
+  color: var(--coede-text) !important;
+}
+.dropdown-item {
+  color: #cbd5e1 !important;
+}
+.dropdown-item:hover {
+  background-color: rgba(197, 155, 63, 0.15) !important;
+  color: var(--coede-gold-light) !important;
+}
+
+.form-control, .form-select {
+  background-color: #0b100d;
+  border: 1px solid var(--coede-slate-light);
+  color: #f0f4f1;
+}
+.form-control:focus, .form-select:focus {
+  background-color: #0e1510;
+  border-color: var(--coede-gold);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(197, 155, 63, 0.3);
+}
+
+footer {
+  background-color: var(--coede-darker) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: var(--coede-text-muted) !important;
+}
+
+/* ============================================================
+   REDISEÑO CONTROL DE ACCESO - PUESTO DE CONTROL TÁCTICO COEDE
+   ============================================================ */
+
+/* Reloj Táctico Militar en Tiempo Real */
+.tactical-clock {
+  font-family: 'Consolas', 'Courier New', monospace;
+  background: rgba(12, 16, 13, 0.85);
+  border: 1px solid var(--coede-border);
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  color: var(--coede-gold-light);
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.6);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.tactical-clock .live-dot {
+  width: 9px;
+  height: 9px;
+  background-color: #4ade80;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #4ade80;
+  animation: liveBlink 1.2s infinite alternate ease-in-out;
+}
+@keyframes liveBlink {
+  from { opacity: 0.25; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1.15); }
+}
+
+/* Contenedor Principal Cockpit */
+.gate-cockpit {
+  min-height: calc(100vh - 130px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header de Guardia Minimalista */
+.gate-header-bar {
+  background: linear-gradient(90deg, #162018 0%, #111813 100%);
+  border: 1px solid var(--coede-border);
+  border-radius: 12px;
+  padding: 0.85rem 1.25rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.25rem;
+}
+
+/* Caja del Lector con Efecto Láser */
+.scanner-card {
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid var(--coede-border);
+  background: linear-gradient(180deg, #18241c 0%, #111813 100%);
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.6);
+}
+
+/* Selector de Flujo Táctico */
+.flow-pill-group {
+  display: flex;
+  background: #0d120e;
+  border: 1px solid var(--coede-border);
+  border-radius: 10px;
+  padding: 4px;
+  gap: 4px;
+}
+.flow-pill-btn {
+  flex: 1;
+  border-radius: 8px;
+  padding: 0.65rem 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  border: none;
+  background: transparent;
+  color: var(--coede-text-muted);
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.flow-pill-btn.active-in {
+  background: linear-gradient(135deg, #1e7e46 0%, #155731 100%);
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(30, 126, 70, 0.4);
+}
+.flow-pill-btn.active-out {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(29, 78, 216, 0.4);
+}
+
+/* Input DNI de Alta Precisión */
+.input-dni-tactical {
+  background-color: #0b100d !important;
+  color: #ffffff !important;
+  border: 2px solid var(--coede-border) !important;
+  border-radius: 10px !important;
+  font-family: 'Consolas', 'Courier New', monospace !important;
+  font-size: 1.6rem !important;
+  letter-spacing: 4px !important;
+  text-align: center !important;
+  padding: 0.6rem !important;
+  font-weight: 800 !important;
+  box-shadow: inset 0 2px 10px rgba(0,0,0,0.8) !important;
+  transition: all 0.3s ease !important;
+}
+.input-dni-tactical:focus {
+  border-color: var(--coede-gold-light) !important;
+  box-shadow: 0 0 15px rgba(230, 197, 117, 0.4), inset 0 2px 10px rgba(0,0,0,0.8) !important;
+}
+
+/* Tarjeta de Identidad Militar en Columna Derecha */
+.military-id-card {
+  background: linear-gradient(145deg, #17221a 0%, #101612 100%);
+  border: 2px solid var(--coede-border);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.military-id-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #987223, #e6c575, #987223);
+}
+
+/* Marco de Foto Oficial Reforzado */
+.military-photo-frame {
+  width: 175px;
+  height: 215px;
+  border: 3px solid var(--coede-gold);
+  border-radius: 10px;
+  background: #0c100d;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.7), 0 0 15px rgba(197, 155, 63, 0.25);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.military-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.military-photo-ribbon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(12, 16, 13, 0.85);
+  color: var(--coede-gold-light);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 0;
+  text-align: center;
+  border-top: 1px solid var(--coede-gold-dark);
+}
+
+/* Gran Semáforo Lumínico */
+.gate-beacon-indicator {
+  border-radius: 12px;
+  padding: 1.1rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.7);
+  transition: all 0.35s ease;
+}
+.beacon-authorized {
+  background: linear-gradient(135deg, #184c2a 0%, #0c2e17 100%);
+  color: #79f29e;
+  border: 2px solid #2ecc71;
+  box-shadow: 0 0 30px rgba(46, 204, 113, 0.35);
+}
+.beacon-denied {
+  background: linear-gradient(135deg, #59161c 0%, #360a0f 100%);
+  color: #ff9199;
+  border: 2px solid #e74c3c;
+  box-shadow: 0 0 30px rgba(231, 76, 60, 0.4);
+}
+.beacon-warning {
+  background: linear-gradient(135deg, #5e410b 0%, #382504 100%);
+  color: #ffe082;
+  border: 2px solid #f1c40f;
+  box-shadow: 0 0 30px rgba(241, 196, 15, 0.35);
+}
+.beacon-exit {
+  background: linear-gradient(135deg, #143b66 0%, #0a213a 100%);
+  color: #8acaff;
+  border: 2px solid #3498db;
+  box-shadow: 0 0 30px rgba(52, 152, 219, 0.4);
+}
+.beacon-idle {
+  background: linear-gradient(135deg, #1b261e 0%, #121914 100%);
+  color: var(--coede-text-muted);
+  border: 2px dashed var(--coede-slate-light);
+}
+
+/* Formularios Dinámicos con Transición Suave */
+.dynamic-form-section {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.35s ease, margin 0.35s ease;
+  margin-top: 0;
+}
+.dynamic-form-section.show {
+  max-height: 400px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+/* Botón Único de Acción Inteligente */
+.btn-action-primary {
+  width: 100%;
+  padding: 0.95rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+.btn-action-primary.btn-action-in {
+  background: linear-gradient(135deg, #27ae60 0%, #196f3d 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(39, 174, 96, 0.4);
+}
+.btn-action-primary.btn-action-in:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2ecc71 0%, #1e8449 100%);
+  box-shadow: 0 6px 24px rgba(46, 204, 113, 0.5);
+  transform: translateY(-2px);
+}
+.btn-action-primary.btn-action-out {
+  background: linear-gradient(135deg, #2980b9 0%, #1a5276 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(41, 128, 185, 0.4);
+}
+.btn-action-primary.btn-action-out:hover:not(:disabled) {
+  background: linear-gradient(135deg, #3498db 0%, #21618c 100%);
+  box-shadow: 0 6px 24px rgba(52, 152, 219, 0.5);
+  transform: translateY(-2px);
+}
+.btn-action-primary.btn-action-danger {
+  background: linear-gradient(135deg, #c0392b 0%, #78281f 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(192, 57, 43, 0.4);
+}
+
+/* SweetAlert2 Tema Militar */
+.swal2-popup.coede-swal {
+  background: #141815 !important;
+  color: #f0f4f1 !important;
+  border: 2px solid var(--coede-gold) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.85), 0 0 25px rgba(197, 155, 63, 0.25) !important;
+  font-family: inherit !important;
+}
+.coede-swal .swal2-title {
+  color: var(--coede-gold-light) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px !important;
+}
+.coede-swal .swal2-html-container {
+  color: #d8e0da !important;
+}
+.btn-coede-swal-confirm {
+  background: linear-gradient(135deg, #c59b3f 0%, #987223 100%) !important;
+  color: #0c100d !important;
+  font-weight: 800 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 0.6rem 1.4rem !important;
+  box-shadow: 0 4px 15px rgba(197, 155, 63, 0.4) !important;
+}
+.btn-coede-swal-cancel {
+  background: #202d24 !important;
+  color: #f0f4f1 !important;
+  border: 1px solid var(--coede-slate-light) !important;
+  border-radius: 8px !important;
+  padding: 0.6rem 1.4rem !important;
+}
